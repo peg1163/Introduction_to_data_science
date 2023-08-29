@@ -72,7 +72,7 @@ def plot_the_model(trained_weight, trained_bias, feature, label):
     y0 = trained_bias
     x1 = feature[-1]
     y1 = trained_bias + (trained_weight * x1)
-    plt.plot(x0, y0, c='r')
+    plt.plot([x0, x1], [y0, y1],  c='r')
 
     # Render the scatter plot and the red line.
     plt.show()
