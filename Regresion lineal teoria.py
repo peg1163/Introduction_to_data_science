@@ -72,7 +72,7 @@ def plot_the_model(trained_weight, trained_bias, feature, label):
     y0 = trained_bias
     x1 = feature[-1]
     y1 = trained_bias + (trained_weight * x1)
-    plt.plot([x0, x1], [y0, y1],  c='r')
+    plt.plot([x0, x1], [y0, y1[0]],  c='r')
 
     # Render the scatter plot and the red line.
     plt.show()
@@ -103,3 +103,4 @@ trained_weight, trained_bias, epochs, rmse = train_model(my_model, my_feature,
                                                          my_batch_size)
 plot_the_model(trained_weight, trained_bias, my_feature, my_label)
 plot_the_loss_curve(epochs, rmse)
+
